@@ -1,0 +1,30 @@
+{
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "script.js" ],
+      "matches": [ "https://*.twitter.com/*/followers" ]
+   } ],
+   "description": "A simple (configurable) way to mass unfollow your Twitter followings",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "32": "images/32.png",
+      "48": "images/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjigseCEyDe8NFRukE6t39LPevEp1wo0wcTZpgRO/ROkVKHW3iwZ0K+k1v+6EKMgNGpTltDYpnDLdPr29/tmSobqLchD9gkIgP24HURLJOAjMUYOE5vhImc/HhvzjwX5vUaH1xbC8nQyb2NRnUyO0In6/YQfW1dCgfnsox1s5a224RdzKExM1nU3PZTA5/JujVK8JIoFx4NCjpyiVlvKxAvXfTun/aW54J0HVqczqnP7/iyymNf975n+emJ1Yq/P/ufgwPg2SzJri6fABehNm6N3bFhrhNzghGzGIFjgrKGhLNKm50CIdLrToQpR+LErTdGOKBCZE6DnkaZ4aJKvjpQIDAQAB",
+   "manifest_version": 3,
+   "name": "Twitter mass follower delete",
+   "options_page": "options.html",
+   "permissions": [ "storage", "declarativeContent", "scripting", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.5",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "shared.js" ]
+   } ]
+}
